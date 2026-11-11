@@ -46,7 +46,7 @@ struct StatusNotification {
     ///
     /// - returns: Whether to present a notification for the current battery percentage
     private func shouldPresentNotification() -> Bool {
-        (self.notificationKey != UserPreferences.lastNotified
+        return (self.notificationKey != UserPreferences.lastNotified
             && UserPreferences.notifications.contains(self.notificationKey))
     }
 

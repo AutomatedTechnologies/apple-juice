@@ -20,6 +20,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func userNotificationCenter(_: NSUserNotificationCenter,
                                 shouldPresentNotification _: NSUserNotification) -> Bool
     {
-        true
+        return true
     }
 }

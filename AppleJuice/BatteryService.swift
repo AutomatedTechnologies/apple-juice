@@ -66,17 +66,17 @@ final class BatteryService {
 
     /// The current percentage, based on the current charge and the maximum capacity.
     var percentage: Percentage {
-        Percentage(numeric: getPowerSourceProperty(forKey: .percentage) as? Int)
+        return Percentage(numeric: getPowerSourceProperty(forKey: .percentage) as? Int)
     }
 
     /// The current charge in mAh.
     var charge: Int? {
-        getRegistryProperty(forKey: .currentCharge) as? Int
+        return getRegistryProperty(forKey: .currentCharge) as? Int
     }
 
     /// The maximum capacity in mAh.
     var capacity: Int? {
-        getRegistryProperty(forKey: .maxCapacity) as? Int
+        return getRegistryProperty(forKey: .maxCapacity) as? Int
     }
 
     /// The source from which the Mac currently draws its power.
@@ -90,17 +90,17 @@ final class BatteryService {
 
     /// Checks whether the battery is charging and connected to a power outlet.
     var isCharging: Bool? {
-        getRegistryProperty(forKey: .isCharging) as? Bool
+        return getRegistryProperty(forKey: .isCharging) as? Bool
     }
 
     /// Checks whether the battery is fully charged.
     var isCharged: Bool? {
-        getRegistryProperty(forKey: .fullyCharged) as? Bool
+        return getRegistryProperty(forKey: .fullyCharged) as? Bool
     }
 
     /// Checks whether the battery is plugged into an unlimited power supply.
     var isPlugged: Bool? {
-        getRegistryProperty(forKey: .isPlugged) as? Bool
+        return getRegistryProperty(forKey: .isPlugged) as? Bool
     }
 
     /// Calculates the current power usage in Watts.
@@ -120,7 +120,7 @@ final class BatteryService {
 
     /// The number of charging cycles.
     var cycleCount: Int? {
-        getRegistryProperty(forKey: .cycleCount) as? Int
+        return getRegistryProperty(forKey: .cycleCount) as? Int
     }
 
     /// The battery's current temperature.
@@ -133,7 +133,7 @@ final class BatteryService {
 
     /// The batteries' health status
     var health: String? {
-        getPowerSourceProperty(forKey: .health) as? String
+        return getPowerSourceProperty(forKey: .health) as? String
     }
 
     // MARK: Private
@@ -171,7 +171,7 @@ final class BatteryService {
     /// - parameter key: A BatteryRegistryPropertyKey to get the corresponding registry entry.
     /// - returns: The registry entry for the provided BatteryRegistryPropertyKey.
     private func getRegistryProperty(forKey key: BatteryRegistryPropertyKey) -> Any? {
-        IORegistryEntryCreateCFProperty(service, key.rawValue as CFString?, nil, 0).takeRetainedValue()
+        return IORegistryEntryCreateCFProperty(service, key.rawValue as CFString?, nil, 0).takeRetainedValue()
     }
 
     /// Get a power source entry for the supplied property key.

@@ -12,48 +12,48 @@ final class UserPreferences: NSObject {
 
     /// True if the user wants the remaining time to be displayed within the menu bar.
     static var showTime: Bool {
-        userDefaults.bool(forKey: PreferenceKey.showTime.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.showTime.rawValue)
     }
 
     /// Hide all menu bar information
     static var hideMenubarInfo: Bool {
-        userDefaults.bool(forKey: PreferenceKey.hideMenubarInfo.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.hideMenubarInfo.rawValue)
     }
 
     /// Hide all menu bar information
     static var hideBatteryIcon: Bool {
-        userDefaults.bool(forKey: PreferenceKey.hideBatteryIcon.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.hideBatteryIcon.rawValue)
     }
 
     /// True if the user wants a notification at five percent.
     static var fivePercentNotification: Bool {
-        userDefaults.bool(forKey: PreferenceKey.fivePercentNotification.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.fivePercentNotification.rawValue)
     }
 
     /// True if the user wants a notification at ten percent.
     static var tenPercentNotification: Bool {
-        userDefaults.bool(forKey: PreferenceKey.tenPercentNotification.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.tenPercentNotification.rawValue)
     }
 
     /// True if the user wants a notification at fifeteen percent.
     static var fifeteenPercentNotification: Bool {
-        userDefaults.bool(forKey: PreferenceKey.fifeteenPercentNotification.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.fifeteenPercentNotification.rawValue)
     }
 
     /// True if the user wants a notification at twenty percent.
     static var twentyPercentNotification: Bool {
-        userDefaults.bool(forKey: PreferenceKey.twentyPercentNotification.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.twentyPercentNotification.rawValue)
     }
 
     /// True if the user wants a notification at hundred percent.
     static var hundredPercentNotification: Bool {
-        userDefaults.bool(forKey: PreferenceKey.hundredPercentNotification.rawValue)
+        return userDefaults.bool(forKey: PreferenceKey.hundredPercentNotification.rawValue)
     }
 
     /// Keeps the percentage the user was last notified.
     static var lastNotified: NotificationKey? {
         get {
-            NotificationKey(rawValue: userDefaults.integer(forKey: PreferenceKey.lastNotification.rawValue))
+            return NotificationKey(rawValue: userDefaults.integer(forKey: PreferenceKey.lastNotification.rawValue))
         }
         set {
             guard let notificationKey = newValue else {

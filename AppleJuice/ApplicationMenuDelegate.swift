@@ -5,7 +5,6 @@
 //
 
 import Cocoa
-import SwiftUI
 
 class ApplicationMenuDelegate: NSObject, NSMenuDelegate {
     // MARK: Public
@@ -32,17 +31,6 @@ class ApplicationMenuDelegate: NSObject, NSMenuDelegate {
         }
 
         item.attributedTitle = getAttributedMenuItemTitle()
-        if #available(OSX 11.0, *) {
-            let hostingView = NSHostingView(rootView: MenuInfoView())
-            hostingView.frame = NSRect(x: 0,
-                                       y: 0,
-                                       width: hostingView.intrinsicContentSize.width,
-                                       height: hostingView.intrinsicContentSize.height)
-
-            item.view = hostingView
-        } else {
-            item.attributedTitle = getAttributedMenuItemTitle()
-        }
     }
 
     private func getAttributedMenuItemTitle() -> NSAttributedString {

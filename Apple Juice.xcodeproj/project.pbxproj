@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,8 +54,6 @@
 		C57FE291255CA2EB00E4E2B4 /* Sparkle.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = C57FE290255CA2EB00E4E2B4 /* Sparkle.framework.dSYM */; };
 		C57FE293255CA2F600E4E2B4 /* Sparkle.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = C57FE290255CA2EB00E4E2B4 /* Sparkle.framework.dSYM */; };
 		C5819EF4257BE32700F964E3 /* ApplicationMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5819EF2257BE32700F964E3 /* ApplicationMenuDelegate.swift */; };
-		C5819EF8257BE38E00F964E3 /* MenuInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5819EF7257BE38E00F964E3 /* MenuInfoView.swift */; };
-		C5819EFD2580256400F964E3 /* MenuInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5819EFC2580256300F964E3 /* MenuInfoViewModel.swift */; };
 		C59FD5E225614C3000D50FC1 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59FD5E125614C3000D50FC1 /* LaunchAtLogin.framework */; };
 		C59FD5E325614C3000D50FC1 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C59FD5E125614C3000D50FC1 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C59FD5E525614C7000D50FC1 /* LaunchAtLogin.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = C59FD5E425614C7000D50FC1 /* LaunchAtLogin.framework.dSYM */; };
@@ -160,8 +158,6 @@
 		C57FE287255CA25F00E4E2B4 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Carthage/Build/Mac/Sparkle.framework; sourceTree = "<group>"; };
 		C57FE290255CA2EB00E4E2B4 /* Sparkle.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Sparkle.framework.dSYM; path = Carthage/Build/Mac/Sparkle.framework.dSYM; sourceTree = "<group>"; };
 		C5819EF2257BE32700F964E3 /* ApplicationMenuDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationMenuDelegate.swift; sourceTree = "<group>"; };
-		C5819EF7257BE38E00F964E3 /* MenuInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInfoView.swift; sourceTree = "<group>"; };
-		C5819EFC2580256300F964E3 /* MenuInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInfoViewModel.swift; sourceTree = "<group>"; };
 		C58CD0B6222179A300D286C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C58CD0B7222179D200D286C0 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C58CD0B822217BAB00D286C0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -267,8 +263,6 @@
 				8EBEB4451C466091001DBE91 /* AppDelegate.swift */,
 				8EE129691C4663F7000D404F /* ApplicationController.swift */,
 				C5819EF2257BE32700F964E3 /* ApplicationMenuDelegate.swift */,
-				C5819EF7257BE38E00F964E3 /* MenuInfoView.swift */,
-				C5819EFC2580256300F964E3 /* MenuInfoViewModel.swift */,
 				8E995BAE1EABD8C800CE8364 /* StatusBarItem.swift */,
 				8EE1296D1C469326000D404F /* StatusBarIcon.swift */,
 				8E31BF9E1D42651F00055A5B /* BatteryImageCache.swift */,
@@ -373,13 +367,13 @@
 		8EBEB43A1C466091001DBE91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1200;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Raphael Hanneken";
 				TargetAttributes = {
 					8E0D33AE1D3118CD002D3463 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -389,7 +383,7 @@
 					};
 					8EBEB4411C466091001DBE91 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.HardenedRuntime = {
 								enabled = 0;
@@ -402,7 +396,7 @@
 				};
 			};
 			buildConfigurationList = 8EBEB43D1C466091001DBE91 /* Build configuration list for PBXProject "Apple Juice" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -540,14 +534,12 @@
 				C52233AF25575A0A00526725 /* NSImageExtension.swift in Sources */,
 				8E995BB41EABD8C800CE8364 /* StatusBarItem.swift in Sources */,
 				8E995BAF1EABD8C800CE8364 /* BatteryError.swift in Sources */,
-				C5819EFD2580256400F964E3 /* MenuInfoViewModel.swift in Sources */,
 				C5696ABA2573DAA1001316FC /* TimeRemaining.swift in Sources */,
 				8EE1296A1C4663F7000D404F /* ApplicationController.swift in Sources */,
 				8E995BB31EABD8C800CE8364 /* BatteryRegistryPropertyKey.swift in Sources */,
 				8E31BF9F1D42651F00055A5B /* BatteryImageCache.swift in Sources */,
 				C5EEDA6920276240004DE64C /* PreferenceKey.swift in Sources */,
 				C5819EF4257BE32700F964E3 /* ApplicationMenuDelegate.swift in Sources */,
-				C5819EF8257BE38E00F964E3 /* MenuInfoView.swift in Sources */,
 				8EE1296E1C469326000D404F /* StatusBarIcon.swift in Sources */,
 				C5696AC12573E0F9001316FC /* PowerSource.swift in Sources */,
 				8EBEB4461C466091001DBE91 /* AppDelegate.swift in Sources */,
@@ -613,13 +605,13 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 2020.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raphaelhanneken.applejuice.Apple-Juice-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -638,14 +630,14 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 2020.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raphaelhanneken.applejuice.Apple-Juice-Today";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -697,7 +689,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -747,7 +739,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -773,11 +765,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 2020.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raphaelhanneken.applejuice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -799,11 +791,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 2020.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.raphaelhanneken.applejuice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
